@@ -115,8 +115,54 @@ p{
     grid-column: 1;
     align-self: start;
     justify-self: start;
-    padding: 30px;;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    padding-left: 0px;
+    border-style: solid;
 }
+
+#myLabel {
+
+    font-size: 32px;
+    align-self: center;
+    
+}
+
+#myRange {
+
+  background-color: red;  
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 100%; 
+    height: 6px; 
+    background: #e96868; 
+    align-self: center;
+  
+}
+
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    outline-style: solid;
+    border-radius: 50%;
+    background: #7B6079;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline-style: solid;
+    outline-color: rgb(194, 194, 194);
+    background: #7B6079;
+  }
+
 
 .cell {
 
