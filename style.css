@@ -1,0 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+
+    
+    display:grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:100vh;
+    background-color: #DE8971;
+    color:#FFE9D6;
+    font-family: amatic sc;
+}
+
+#sketchBoxBorder {
+
+    border: solid 100px #7B6079;
+   border-top:0px;
+   border-bottom: 0px;
+    background-color: #7B6079;
+    border-radius: 1%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    text-align: center;
+    align-content: center;
+  
+  
+}
+
+#sketchBox {
+
+   
+
+    min-width:750px;
+    min-height:600px;
+    
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 1%;
+    background-color:#A7D0CD;
+
+    /* i think it will need to be like 
+    //if there are n columns we need n rows
+    //and then we need n * n divs
+    so if we have 3 columns, we do 3 rows, then 3 * 3 divs to fill
+    */
+
+    
+    
+}
+
+p{
+
+    justify-self: center;
+    align-self: center;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size: 60px;
+}
+
+
+#buttonWrap {
+
+    grid-column: 1;
+    align-self: start;
+    justify-self: start;
+    padding: 30px;;
+}
+
+.cell {
+
+    outline: solid;
+    outline-width: 0.01em;
+    outline-color: rgb(165, 164, 164);
+    
+    height:100%;
+    border-radius: 1%;
+   
+}
+
