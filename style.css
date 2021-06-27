@@ -113,17 +113,39 @@ p{
 #buttonWrap {
 
     grid-column: 1;
+    width: 100%;
+ 
     align-self: start;
     justify-self: start;
-    padding: 40px;
+    padding: 25px;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr ;
     grid-gap: 10px;
     padding-left: 0px;
-    border-style: solid;
+   
+  
 }
 
-#myLabel {
+#iconWrap {
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: flex-end;
+    justify-self: flex-end;
+    padding-right: 0px;
+    grid-gap: 20px;
+  
+}
+
+.colorIcon:hover {
+
+    scale:1.1;
+    transition: all 0.4s;
+
+
+}
+
+.myLabel {
 
     font-size: 32px;
     align-self: center;
@@ -139,6 +161,7 @@ p{
     height: 6px; 
     background: #e96868; 
     align-self: center;
+    width:200px;
   
 }
 
@@ -174,4 +197,7 @@ p{
     border-radius: 1%;
    
 }
+
+ 
+
 

@@ -1,4 +1,4 @@
-let number = 9;
+let number = 5;
 let range = document.querySelector("#myRange");
 range.addEventListener("change", rangeChange);
 let sketchBox = document.querySelector("#sketchBox");
