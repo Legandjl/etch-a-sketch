@@ -139,21 +139,16 @@ body {
     display: grid;
     justify-items: center;
     align-items: center;
-    align-content: center;
-    
     grid-template-columns: 1fr 1fr 1fr;
-    
     height: 100vh;
     background-color: #DE8971;
     color: #FFE9D6;
     font-family: amatic sc;
-    
 }
 
 #sketchBoxBorder {
 
     border: solid 100px #7B6079;
-    
     border-top: 0px;
     border-bottom: 0px;
     background-color: #7B6079;
@@ -162,7 +157,6 @@ body {
     justify-content: center;
     align-items: center;
     grid-column: 2;
-    grid-row: 2;
     text-align: center;
     align-content: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -175,7 +169,7 @@ body {
 
     
 
-    min-width: 80%;
+    min-width: 700px;
     min-height: 35em;
     
    display: grid;
