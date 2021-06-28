@@ -169,7 +169,7 @@ body {
 
     
 
-    min-width: 55em;
+    min-width: 45em;
     min-height: 35em;
     
    display: grid;
@@ -269,7 +269,7 @@ p {
 
 .myLabel {
 
-    font-size: 32px;
+    font-size: 1.5rem;
     align-self: center;
 
 }
