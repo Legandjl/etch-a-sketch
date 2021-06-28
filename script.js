@@ -1,28 +1,29 @@
 let number = 5;
-let color = "greyColor";
-let eraserON = false;
+
+const eraserColor = "#A7D0CD";
+const starterColor = "rgb(128, 128, 128)";
+
+let eraserOn = false;
 let locked = false;
+
 
 let lockIcon = document.querySelector("#lockIcon");
 
-
-
-let range = document.querySelector("#myRange");
-range.addEventListener("change", rangeChange);
+let gridSlider = document.querySelector("#myRange");
+gridSlider.addEventListener("change", rangeChange);
 
 let sketchBox = document.querySelector("#sketchBox");
-sketchBox.addEventListener("mouseover", sketchClick);
-
+sketchBox.addEventListener("mouseover", sketch);
 sketchBox.addEventListener("click", lockGrid);
 
 let resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", resetGrid);
 
-
 let eraser = document.querySelector("#eraser");
-let greyColor = document.querySelector("#greyScale");
-greyColor.addEventListener("click", greyScale);
-eraser.addEventListener("click",erase);
+let greyButton = document.querySelector("#greyScale");
+
+greyButton.addEventListener("click", greyScale);
+eraser.addEventListener("click", erase);
 
 function rangeChange(e) {
 
@@ -45,62 +46,78 @@ function updateGrid(num) {
         sketchBox.appendChild(currentCell);
     }
 
-
-
 }
 
 
-function sketchClick(e) {
+function sketch(e) {
 
-    if(!locked) {
+    if (!locked) {
 
-   
-    let currentCell = e.target;
-    console.log(currentCell.style);
+        let newCol;
+        let currentCell = e.target;
+        let style = window.getComputedStyle(currentCell);
+        //checks to see if the cell color == eraser/original color
+        if (style.getPropertyValue("background-color") == "rgb(167, 208, 205)") {
 
-    if (eraserON) {
+            newCol = starterColor;
 
-        currentCell.classList.remove(color);
+        } else {
+
+            newCol = darkenColor(style.getPropertyValue("background-color"));
+
+        }
+
+        if (eraserOn) {
+
+            currentCell.style["background-color"] = eraserColor;
+
+        } else {
+
+
+            currentCell.style["background-color"] = newCol;
+
+
+        }
+
     }
-
-    else {
-    
-    currentCell.classList.add(color);
-
-    }
-
-}
 }
 
 
 function resetGrid() {
 
     let cellList = document.querySelectorAll(".cell");
-    console.log(cellList);
-    cellList.forEach(function(element){
 
-        element.classList.remove("greyColor");
+    cellList.forEach(function (element) {
 
+        element.style["background-color"] = eraserColor;
 
     });
 
+    removeButtonScale();
+    color = "greyColor";
+    eraserOn = false;
+    greyButton.classList.add("buttonScale");
 
 }
 
-function greyScale() {
+function greyScale(e) {
 
-    eraserON = false;
+    removeButtonScale();
+    e.target.classList.add("buttonScale");
+    eraserOn = false;
 }
 
-function erase() {
+function erase(e) {
 
-    eraserON = true;
+    removeButtonScale();
+    e.target.classList.add("buttonScale");
+    eraserOn = true;
 }
 
 
 function lockGrid() {
 
-    if(locked == false) {
+    if (locked == false) {
 
         locked = true;
         lockIcon.style.opacity = "100";
@@ -109,6 +126,37 @@ function lockGrid() {
 
     locked = false;
     lockIcon.style.opacity = "0";
+}
+
+
+function removeButtonScale() {
+
+    let buttonList = document.querySelectorAll(".colorIcon");
+    buttonList.forEach(function (element) {
+
+        element.classList.remove("buttonScale");
+
+
+    });
+}
+
+//takes an rgb value and removes the numbers from it so I can manipulate it
+
+function darkenColor(color) {
+
+    let rgbArray = color.match(/\d+/g);
+    let num1 = parseInt(rgbArray[0]);
+    let num2 = parseInt(rgbArray[1]);
+    let num3 = parseInt(rgbArray[2]);
+
+    if (num1 <= 48) {
+
+        return color;
+    }
+
+    let newColor = `rgb(${num1 - 10},${num2 - 10},${num3 - 10})`;
+
+    return newColor;
 }
 
 updateGrid(number);
