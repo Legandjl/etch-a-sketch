@@ -169,7 +169,7 @@ body {
 
     
 
-    min-width: 700px;
+    min-width: 50em;
     min-height: 35em;
     
    display: grid;
