@@ -385,17 +385,14 @@ p {
 #buttonWrap {
 
     grid-template-columns: 1fr 1fr;
-
-
 }
 
 #iconWrap {
 
     grid-row: 1;
-
     grid-column: 2;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, auto);
     justify-items: center;
 }
 
@@ -411,15 +408,15 @@ p {
 
     #sketchBox {
 
-        min-width: 360px;
-        min-height:360px;
+        min-width: 340px;
+        min-height:340px;
         width:360px;
         justify-self: center;
     }
 
     #sketchBoxBorder {
 
-        border-width: 40px;
+        border-width: 20px;
     }
 
     #title {
@@ -441,10 +438,26 @@ p {
 
 #myRange {
 
-    width:120px;
+    width:100px;
     
  }
+
+ .myLabel {
+
+    font-size: 22px;
+
+}
+
+.slider::-webkit-slider-thumb {
+
+
+    scale:0.8;
+}
     
+
+.slider::-moz-range-thumb {
+scale:0.8;
+}
         
 
 }
