@@ -30,8 +30,13 @@
 
         <div id = "sketchBoxBorder">
 
-            <p>Etch A Sketch</p>
+          
 
+            <p id = "title"> Etch A Sketch</p>
+            <div id = headerBox>
+            <p id = "lockInfo">Click anywhere to lock</p>
+             <img id = "lockIcon" src="images/lock.png">
+            </div>
         <div id = "sketchBox">       
 
 
@@ -43,13 +48,17 @@
 
 
             
-            <input type="range" name = "myRange" min="5" max="30" value="30" step = 5 class="slider" id="myRange">
+            <input type="range" name = "myRange" min="5" max="30" value="5" step = 5 class="slider" id="myRange" autocomplete="off">
             <div id = "iconWrap">
 
+
+                <label class = "myLabel">Reset:</label>              
+                
+                <input type = "image" id = "reset" src = "images/reset.png">
+
                 <label class = "myLabel">Color:</label>
-                <input type = "image" class = "colorIcon" src = "images/greyScale.png">
-                <input type = "image" class = "colorIcon" src = "images/rbg.png">
-            </div>
+                <input type = "image" id = "greyScale" class = "colorIcon" src = "images/greyColor.png">
+                <input type = "image" id = "eraser" class = "colorIcon" src = "images/eraser.png">
     
         </div>
 
