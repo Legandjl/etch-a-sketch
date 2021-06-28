@@ -1,4 +1,4 @@
-let number = 5;
+let number = 9;
 
 const eraserColor = "#A7D0CD";
 const starterColor = "rgb(128, 128, 128)";
