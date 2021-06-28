@@ -163,17 +163,24 @@ body {
 
 }
 
+
+
 #sketchBox {
+
+    
 
     min-width: 750px;
     min-height: 600px;
-    display: grid;
+    
+   display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     border-radius: 1%;
     background-color: #A7D0CD;
 
 }
+
+
 
 p {
 
@@ -321,3 +328,124 @@ p {
 
 
 }
+
+/*responsive css - bit hacky, should have done mobile first -_- */
+
+@media only screen and (max-width: 960px) {
+
+
+#sketchBoxBorder {      
+   
+    border-width: 60px;   
+
+}
+
+#sketchBox {
+
+    min-width: 600px;
+    min-height:450px;
+    width:600px;
+    
+}
+
+
+.myLabel {
+
+    font-size: 25px;
+
+}
+
+#headerBox{
+
+    font-size: 10px;    
+}
+
+#title {
+
+    font-size: 50px;
+}
+
+#lockInfo {
+
+    font-size:25px;
+    
+}
+
+#myRange {
+
+   width:180px;
+   
+}
+
+#rangeLabel {
+
+    display: none;
+}
+
+#buttonWrap {
+
+    grid-template-columns: 1fr 1fr;
+
+
+}
+
+#iconWrap {
+
+    grid-row: 1;
+
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: center;
+}
+
+
+#reset, #eraser, #greyScale{
+    width:50px;
+    height:50px;
+}
+
+}
+
+@media only screen and (max-width: 733px) {
+
+    #sketchBox {
+
+        min-width: 360px;
+        min-height:360px;
+        width:360px;
+        justify-self: center;
+    }
+
+    #sketchBoxBorder {
+
+        border-width: 40px;
+    }
+
+    #title {
+
+        font-size: 45px;
+    }
+    
+    #lockInfo {
+    
+        font-size:25px;
+
+    }
+
+    #reset, #eraser, #greyScale{
+        width:40px;
+        height:40px;
+    }
+
+
+#myRange {
+
+    width:120px;
+    
+ }
+    
+        
+
+}
+
