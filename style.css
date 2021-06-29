@@ -331,6 +331,7 @@ p {
 
 #rangeWrap {
     align-self: center;
+    display: grid;
     
 }
 
