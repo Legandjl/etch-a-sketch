@@ -327,7 +327,7 @@ p {
     border-radius: 50%;
 
 
-}
+}/*
 
 #rangeWrap {
     align-self: center;
@@ -335,6 +335,7 @@ p {
     grid-gap:5px;
     grid-template-columns: auto 1fr;
 }
+*/
 
 /*responsive css - bit hacky, should have done mobile first -_- */
 
