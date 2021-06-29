@@ -332,6 +332,7 @@ p {
 #rangeWrap {
     align-self: center;
     display: grid;
+    grid-template-columns: auto 1fr;
     
 }
 
