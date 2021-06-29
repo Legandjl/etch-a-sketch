@@ -329,6 +329,14 @@ p {
 
 }
 
+#rangeWrap {
+
+    align-self: center;
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: auto 1fr;
+}
+
 /*responsive css - bit hacky, should have done mobile first -_- */
 
 @media only screen and (max-width: 960px) {
@@ -376,10 +384,6 @@ p {
    
 }
 
-#rangeLabel {
-
-    display: none;
-}
 
 #buttonWrap {
 
@@ -450,6 +454,12 @@ p {
 
 
     scale:0.8;
+}
+
+
+#rangeLabel {
+
+    display: none;
 }
     
 
